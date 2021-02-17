@@ -16,8 +16,12 @@
 
  @import "bulma";
 
- .notification:not(:last-child) {
+.notification:not(:last-child) {
   margin-bottom: 0;
+}
+
+.navbar {
+  height: 100px;
 }
 
 abbr[title="required"] {
