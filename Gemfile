@@ -33,6 +33,7 @@ gem "sentry-ruby"
 gem "sentry-rails"
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'hirb', '~> 0.7.3'
+gem 'bullet', '~> 6.1', '>= 6.1.3'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
