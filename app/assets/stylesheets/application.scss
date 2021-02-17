@@ -13,8 +13,12 @@
  *= require_tree .
  *= require_self
  */
-
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
  @import "bulma";
+
+ body {
+  font-family: 'Roboto', sans-serif;
+ }
 
 .notification:not(:last-child) {
   margin-bottom: 0;
@@ -26,4 +30,8 @@
 
 abbr[title="required"] {
   display: none;
+}
+
+.cursor {
+  cursor: pointer;
 }

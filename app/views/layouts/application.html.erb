@@ -25,37 +25,59 @@
   		</div>
   	<% end %>
      <nav class="navbar is-white">
-  		<div class="navbar-brand ml-5">
+      <div class="navbar-brand">
         <%= link_to root_path, class: "navbar-item" do %>
         <%= image_tag("sustyle-black.png", alt: "sustyle logo", :size => "120x140") %>
         <% end %>
-  	 </div>
-     <div id="navbarExample" class="navbar-menu">
-				<div class="navbar-end">
-          <div class="navbar-item">
-					<div class="field is-grouped is-mobile">
-						<p class="control">
-							<%= link_to 'New Article', new_article_path, class: "button is-success is-inverted" %>
-						</p>
-            <% if user_signed_in? %>
-              <p class="control">
-                <%= link_to current_user.name, edit_user_registration_path, class: "button is-dark" %>
-              </p>
-              <p>
-                <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"button is-dark" %>
-              </p>
-            <% else %>
-            <p class="control">
-              <%= link_to 'Sign In', new_user_session_path, class: "button is-dark" %>
-            </p>
-						<p class="control">
-              <%= link_to 'Sign Up', new_user_registration_path, class: "button is-dark" %>
-            </p>
-            <% end %>
-            </div>
-					</div>
-				</div>
+      </div>
+      <div id="navbarExample" class="navbar-menu is-justify-content-center">
+        <div class="navbar">
+          <div class="navbar-item button is-white is-align-self-center">
+            <%= link_to 'HOME', new_user_session_path, class: "button is-white" %>
+          </div>
+          <div class="navbar-item button is-white is-align-self-center">
+            <%= link_to 'FOOD', new_user_session_path, class: "button is-white" %>
+          </div>
+          <div class="navbar-item button is-white is-align-self-center">
+            <%= link_to 'ENERGY', new_user_session_path, class: "button is-white" %>
+          </div>
+          <div class="navbar-item button is-white is-align-self-center">
+            <%= link_to 'FASHION', new_user_session_path, class: "button is-white" %>
+          </div>
+          <div class="navbar-item button is-white is-align-self-center">
+            <%= link_to 'ECONOMICS', new_user_session_path, class: "button is-white" %>
+          </div>
+          <div class="navbar-item button is-white is-align-self-center">
+            <%= link_to 'TECHNOLOGY', new_user_session_path, class: "button is-white" %>
+          </div>
+        </div>
+			  
 			</div>
+      <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped is-mobile">
+              <% if user_signed_in? %>
+                <p class="control">
+                  <%= link_to 'New Article', new_article_path, class: "button is-danger is-inverted" %>
+                </p>
+                <p class="control">
+                  <%= link_to current_user.name, edit_user_registration_path, class: "button is-dark" %>
+                </p>
+                <p>
+                  <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"button is-dark" %>
+                </p>
+              <% else %>
+              <p class="control">
+                <%= link_to 'LOGIN', new_user_session_path, class: "button is-white" %>
+              </p>
+              <p class="is-align-self-center">|</p>
+              <p class="control">
+                <%= link_to 'REGISTER', new_user_registration_path, class: "button is-white" %>
+              </p>
+              <% end %>
+              </div>
+            </div>
+				</div>
     </nav>
     
     <%= yield %>
