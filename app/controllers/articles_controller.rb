@@ -14,6 +14,7 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   def new
     @article = Article.new
+    @categories = Category.all
   end
 
   # GET /articles/1/edit
@@ -21,7 +22,7 @@ class ArticlesController < ApplicationController
 
   # POST /articles or /articles.json
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.build(article_params)
 
     respond_to do |format|
       if @article.save
@@ -58,13 +59,11 @@ class ArticlesController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_article
-    @article = Article.find(params[:id])
+  def article_params
+    params.require(:article).permit(:title, :text, :image)
   end
 
-  # Only allow a list of trusted parameters through.
-  def article_params
-    params.fetch(:article, {})
+  def category_ids
+    params[:selected_id]
   end
 end
