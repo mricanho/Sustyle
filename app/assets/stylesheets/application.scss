@@ -33,10 +33,15 @@ abbr[title="required"] {
   display: none;
 }
 
-.button.is-dark {
+.button.is-dark,
+.footer {
   background-color: #4E443E;
 }
 
 .sign-x, a {
   color: #FA5F00;
+}
+
+.button.is-white {
+  color: #847F7B;
 }

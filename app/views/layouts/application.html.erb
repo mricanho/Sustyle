@@ -81,5 +81,38 @@
     </nav>
     
     <%= yield %>
+    <footer class="footer pb-4 pt-4 is-justify-content-space-between">
+      <div class="columns is-vcentered">
+        <div class="column is-3 ">   
+          <%= link_to root_path, class: "img" do %>
+            <%= image_tag("sustyle-white.png", alt: "sustyle logo", :size => "110x120") %>
+          <% end %>
+        </div>
+        <div class="column is-6 is-size-7 has-text-centered">
+          <p>
+            <a href="#">Privacy</a>
+            <a href="#">Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <span class="has-text-white"> Copyright 2021. All rights reserved.</span>
+          </p>
+        </div>
+        <div class="column is-3 is-size-7 has-text-right is-flex-direction-row-reverse">
+          <li class="is-flex pl-6 is-align-items-center is-align-self-flex-end ml-6">
+            <span class="has-text-white">Connect with us:</span>
+            <div class="social-icons">
+              <a href="#" class="icon">
+                  <%= image_tag("twitter.png", class: "ml-5", alt: "twitter logo", :size => "32x32") %>      
+              </a>
+              <a href="#" class="icon">
+                  <%= image_tag("instagram.png", class: "ml-5", alt: "instagram-logo", :size => "32x32") %>      
+              </a>
+              <a href="#" class="icon">
+                  <%= image_tag("facebook.png", class: "ml-5", alt: "twitter logo", :size => "32x32") %>      
+              </a>
+            </div>
+          </li>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
