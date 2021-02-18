@@ -18,9 +18,11 @@ module ApplicationHelper
   end
 
   def display_photo(article)
-    return article.image unless article.blank?
-
-    ''
+    if article.image.cached?
+      image_tag(article.image)
+    else
+      image_tag("https://source.unsplash.com/800x600/?{energy},{#{article.title}}")
+    end
   end
 
   def display_details(art)
