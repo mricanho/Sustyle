@@ -4,9 +4,9 @@ class CategoriesController < ApplicationController
     @categories = Category.includes(:articles).all
     articles = Article.all
     @most_popular = articles.most_popular
-    @articles_by_x = []
-    @categories.each do |x|
-      @articles_by_x << recent_article(x)
+    @articles_by_category = []
+    @categories.each do |category|
+      @articles_by_category << recent_article(category)
     end
   end
 

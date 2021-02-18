@@ -1,25 +1,22 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Categories</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Category', new_category_path %>
+<section class="hero is-large is-info">
+  <div class="hero-body">
+    <p class="title">
+      <%= @most_popular.title %>
+    </p>
+    <p class="subtitle">
+      <%=@most_popular.text.truncate_words(60) %>
+    </p>
+    <%= display_photo(@most_popular) %>
+  </div>
+</section>
+<section class="hero is-medium is-danger">
+  <div class="hero-body">
+    
+    <p class="title">
+      Medium hero
+    </p>
+    <p class="subtitle">
+      Medium subtitle
+    </p>
+  </div>
+</section>

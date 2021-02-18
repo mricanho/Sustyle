@@ -1,4 +1,8 @@
-<p id="notice"><%= notice %></p>
+<div class="container grid">
+  <% @recent_related_articles.each_with_index do |art, ind| %>
+    <div class="grid article-image">
+      <%= four_articles(art, ind)%>
+    </div>
+  <% end %>
+</div>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>

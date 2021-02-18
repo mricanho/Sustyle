@@ -5,5 +5,5 @@ Rails.application.routes.draw do
     resources :votes, only: %i[create destroy]
   end
   
-  root 'articles#index'
+  root 'categories#index'
 end
