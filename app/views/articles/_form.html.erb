@@ -6,6 +6,7 @@
       <%= f.input :title, label: "What's the title of your article?", input_html: { class: "textarea"}, wrapper: false, label_html: {class: "label"}, placeholder: "Incredible title here...", autofocus: true %><br />
       <%= f.input :text, label: "Fill the content of your article:", input_html: { class: "textarea"}, wrapper: false, label_html: {class: "label"}, placeholder: "Awesome content article here..." %>
       <br>
+      
       <%= f.label :image %><br>
       <%= f.file_field :image, direct_upload: true %>
       <br><br>

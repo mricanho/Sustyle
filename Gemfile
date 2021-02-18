@@ -33,6 +33,7 @@ gem 'hirb', '~> 0.7.3'
 gem 'sentry-rails'
 gem 'sentry-ruby'
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
+gem 'carrierwave', '~> 2.1', '>= 2.1.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
