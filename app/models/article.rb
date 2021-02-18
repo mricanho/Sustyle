@@ -8,6 +8,4 @@ class Article < ApplicationRecord
   validates :text, presence: true
   scope :most_popular, -> { find_by(votes_count: maximum(:votes_count)) }
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
-
-  mount_uploader :image, ImageUploader
 end
