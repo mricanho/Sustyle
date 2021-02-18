@@ -7,4 +7,6 @@ class Article < ApplicationRecord
   validates :title, presence: true, uniqueness: { case_sensitive: false }, length: { maximum: 100 }
   validates :text, presence: true
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
+
+  mount_uploader :image, ImageUploader
 end
