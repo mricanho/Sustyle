@@ -1,14 +1,16 @@
-<section class="hero is-large is-info">
+<section class="hero is-halfheight is-info" style="background: url(<%= @most_popular.image_url %>) center center; background-size: cover">
+  
   <div class="hero-body">
-    <p class="title">
-      <%= @most_popular.title %>
-    </p>
-    <p class="subtitle">
-      <%=@most_popular.text.truncate_words(60) %>
-    </p>
-    <%= display_photo(@most_popular) %>
-    
   </div>
+  <div class="hero-foot">
+    <div class="ml-6">
+      <p class="title">
+        <%= @most_popular.title %>
+      </p>
+      <p class="subtitle">
+        <%=@most_popular.text.truncate_words(60) %>
+      </p>
+    </div>
 </section>
 <section class="hero is-medium is-danger">
   <div class="hero-body">
