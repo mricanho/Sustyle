@@ -109,6 +109,10 @@ GEM
     diff-lcs (1.4.4)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     down (5.2.0)
       addressable (~> 2.5)
     em-websocket (0.5.2)
@@ -363,6 +367,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   database_cleaner (~> 2.0, >= 2.0.1)
   devise (~> 4.7, >= 4.7.3)
+  dotenv-rails
   gravatar_image_tag (~> 1.2)
   guard (~> 2.16, >= 2.16.2)
   guard-livereload (~> 2.5, >= 2.5.2)

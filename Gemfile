@@ -44,6 +44,7 @@ group :development, :test do
   gem 'database_cleaner', '~> 2.0', '>= 2.0.1'
   gem 'rspec-rails', '~> 4.0', '>= 4.0.2'
   gem 'sqlite3', '~> 1.4'
+  gem 'dotenv-rails'
 end
 
 group :development do
