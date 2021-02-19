@@ -22,8 +22,6 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Active Storage variant
-# gem 'image_processing', '~> 1.2'
 
 # Add general gems
 gem 'bulma-rails', '~> 0.9.1'
@@ -33,6 +31,8 @@ gem 'hirb', '~> 0.7.3'
 gem 'sentry-rails'
 gem 'sentry-ruby'
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
+gem 'shrine', '~> 3.3'
+gem 'image_processing', '~> 1.12', '>= 1.12.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
