@@ -2,24 +2,39 @@
   
   <div class="hero-body">
   </div>
-  <div class="hero-foot">
+  <div class="hero-foot mb-5">
     <div class="ml-6">
-      <p class="title is-size-4">
+      <p class="title is-size-3">
         <%= @most_popular.title %>
       </p>
-      <p class="subtitle is-size-6">
+      <p class="subtitle is-size-5">
         <%=@most_popular.text.truncate_words(60) %>
       </p>
     </div>
 </section>
 <section class="hero is-medium is-danger">
-  <div class="hero-body">
+  <div class="columns is-gapless">
+    <div class="column">
+      <div class="hero-body">
     
-    <p class="title">
-      Medium hero
-    </p>
-    <p class="subtitle">
-      Medium subtitle
-    </p>
+    
+      <p class="title">
+        Medium hero
+      </p>
+      <p class="subtitle">
+        Medium subtitle
+      </p>
   </div>
+    </div>
+    <div class="column">
+      No gap
+    </div>
+    <div class="column">
+      No gap
+    </div>
+    <div class="column">
+      No gap
+    </div>
+  </div>
+  
 </section>
