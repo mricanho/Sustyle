@@ -33,22 +33,19 @@
       <div id="navbarExample" class="navbar-menu is-justify-content-center">
         <div class="navbar">
           <div class="navbar-item button is-white is-align-self-center">
-            <%= link_to 'HOME', new_user_session_path, class: "button is-white" %>
+            <%= link_to 'HOME', root_path, class: "button is-white" %>
           </div>
           <div class="navbar-item button is-white is-align-self-center">
-            <%= link_to 'FOOD', new_user_session_path, class: "button is-white" %>
+            <%= link_to 'FOOD', category_path(Category.find(3)), class: "button is-white" %>
           </div>
           <div class="navbar-item button is-white is-align-self-center">
-            <%= link_to 'ENERGY', new_user_session_path, class: "button is-white" %>
+            <%= link_to 'ENERGY', category_path(Category.find(4)), class: "button is-white" %>
           </div>
           <div class="navbar-item button is-white is-align-self-center">
-            <%= link_to 'FASHION', new_user_session_path, class: "button is-white" %>
+            <%= link_to 'FASHION', category_path(Category.find(1)), class: "button is-white" %>
           </div>
           <div class="navbar-item button is-white is-align-self-center">
-            <%= link_to 'ECONOMICS', new_user_session_path, class: "button is-white" %>
-          </div>
-          <div class="navbar-item button is-white is-align-self-center">
-            <%= link_to 'TECHNOLOGY', new_user_session_path, class: "button is-white" %>
+            <%= link_to 'TECHNOLOGY', category_path(Category.find(2)), class: "button is-white" %>
           </div>
         </div>
 			  

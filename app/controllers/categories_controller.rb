@@ -3,6 +3,7 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.includes(:articles).all
     articles = Article.all
+    @xcat = Category.all.order(:priority)
     @most_popular = articles.most_popular
     @articles_by_category = []
     @categories.each do |category|

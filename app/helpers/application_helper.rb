@@ -18,9 +18,7 @@ module ApplicationHelper
   end
 
   def display_photo(article)
-    if article.image_url
-      image_data(article.image)
-    else
+    return 
       image_tag("https://source.unsplash.com/1600x900/?{#{article.title}}")
     end
   end
@@ -50,14 +48,14 @@ module ApplicationHelper
   def show_articles_by_categories(articles)
     return if articles.nil?
 
-    content_tag(:div, nil, class: 'flex') do
-      articles.each_with_index do |art, ind|
+    content_tag(:div, nil, class: 'columns is-gapless') do
+      articles.each_with_index do |articles, index|
         concat link_to(
-          content_tag(:div, nil, class: 'details white-text') do
-            content_tag(:p, @categories.find(ind + 1).name) + (content_tag(:p, art.title) if art)
-          end + (display_photo(art) if art), '#', class: 'recent-article1'
+          content_tag(:div, nil, class: 'hero-head ml-5 mt-4') do
+            content_tag(:p, @categories.find(index + 1).name, class: "title has-text-white") + content_tag(:p, nil, class: "hero-body pt-6 has-text-white") + (content_tag(:p, articles.title, class: "hero-foot subtitle size-6 mb-2") if articles)
+          end + (display_photo(articles) if articles), '#', class: 'recent-article1 column'
         )
       end
-    end
+    
   end
 end

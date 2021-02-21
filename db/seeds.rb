@@ -9,7 +9,6 @@ fashion = Category.create(name: 'Fashion', priority: 1)
 technology = Category.create(name: 'Technology', priority: 2)
 food = Category.create(name: 'Food', priority: 3)
 energy = Category.create(name: 'Energy', priority: 4)
-economics = Category.create(name: 'Economics', priority: 5)
 
 editor = User.create(name: "Editor", email: "sustyle_editor@gmail.com", password: "123456")
 tom = User.create(name: "Tom", email: "tom@gmail.com", password: "password1234")
