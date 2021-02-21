@@ -55,13 +55,13 @@
             <div class="field is-grouped is-mobile">
               <% if user_signed_in? %>
                 <p class="control">
-                  <%= link_to 'New Article', new_article_path, class: "button is-danger is-inverted" %>
+                  <%= link_to 'New Article', new_article_path, class: "button new-a" %>
                 </p>
                 <p class="control">
-                  <%= link_to current_user.name, edit_user_registration_path, class: "button is-dark" %>
+                  <%= link_to current_user.name, edit_user_registration_path, class: "button is-white" %>
                 </p>
                 <p>
-                  <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"button is-dark" %>
+                  <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"button is-white" %>
                 </p>
               <% else %>
               <p class="control">
