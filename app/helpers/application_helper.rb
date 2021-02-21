@@ -54,10 +54,11 @@ module ApplicationHelper
       articles.each_with_index do |articles, index|
         concat link_to(
           content_tag(:div, nil, class: 'hero-head ml-5 mt-4') do
-            content_tag(:p, @find_cat, class: "title has-text-white") + content_tag(:p, nil, class: "hero-body pt-6 has-text-white") + (content_tag(:p, articles.title, class: "hero-foot subtitle size-6 mb-2") if articles)
-          end + (display_photo(articles) if articles), '#', class: 'recent-article1 column'
+            content_tag(:p, @categories.find(index + 1).name, class: "title has-text-white") + content_tag(:p, nil, class: "hero-body pt-6 has-text-white") + (content_tag(:p, articles.title, class: "hero-foot subtitle size-6 mb-2") if articles)
+          end + (display_photo(articles) if articles), '#', class: 'has-text-black column', style: "background: url('{display_photo(articles) if articles}')"
         )
       end
     end    
   end
 end
+# (display_photo(articles) if articles)
