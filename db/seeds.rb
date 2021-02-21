@@ -27,5 +27,5 @@ food.articles.create(author_id:3, title: "Pavlova made from grass, and other foo
   
   The scientifically developed process turns leafy crops grown in the Canterbury plains into a protein with high nutritional value that also has a lighter environmental footprint than either animal or grain-based sources of protein. 
   
-  The process also produces a high-quality stock feed that has the potential to increase dairy and beef performance, while reducing their excess nitrogen. This could provide a viable option for farmers to reduce their environmental footprint.")
+  The process also produces a high-quality stock feed that has the potential to increase dairy and beef performance, while reducing their excess nitrogen. This could provide a viable option for farmers to reduce their environmental footprint.",)
 

@@ -18,10 +18,10 @@ module ApplicationHelper
   end
 
   def display_photo(article)
-    if article.image_url.attached?
+    if article.image_url
       image_data(article.image)
     else
-      image_tag("https://source.unsplash.com/800x600/?{energy},{#{article.title}}")
+      image_tag("https://source.unsplash.com/1600x900/?{#{article.title}}")
     end
   end
 
