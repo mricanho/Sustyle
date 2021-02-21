@@ -1,7 +1,7 @@
-<div class="container grid">
+<div class="hero is-info is-medium">
   <% @recent_related_articles.each_with_index do |art, ind| %>
-    <div class="grid article-image">
-      <%= four_articles(art, ind)%>
+    <div class="columns is-gapless">
+      <%= two_articles1(art, ind)%>
     </div>
   <% end %>
 </div>

@@ -1,27 +1,44 @@
 module ApplicationHelper
-  def four_articles(article, index)
+  # def four_articles(article, index)
+  #   if index < 2
+  #     content_tag(:div, nil, class: 'column is-gapless') do
+  #       content_tag(:div, nil, class: 'photo first column is-one-quarter') do
+  #         display_photo(article)
+  #       end +
+  #         content_tag(:div, nil, class: 'details column card is-one-quarter') do
+  #           display_details(article)
+  #         end
+  #     end
+  #   else
+  #     content_tag(:div, nil, class: 'columns is-gapless') do
+  #       content_tag(:div, nil, class: 'details card column') do
+  #         display_details(article)
+  #       end +
+  #         content_tag(:div, nil, class: 'photo second column') do
+  #           display_photo(article)
+  #         end
+  #     end
+  #   end
+  # end
+
+  def two_articles1(article, index)
     if index < 2
-      content_tag(:div, nil, class: 'photo') do
-        display_photo(article)
-      end +
-        content_tag(:div, nil, class: 'details') do
-          display_details(article)
-        end
-    else
-      content_tag(:div, nil, class: 'details') do
-        display_details(article)
-      end +
-        content_tag(:div, nil, class: 'photo') do
+      content_tag(:div, nil, class: 'column is-half') do
+        content_tag(:div, nil, class: 'photo first column is-one-quarter') do
           display_photo(article)
-        end
+        end +
+          content_tag(:div, nil, class: 'details column card is-one-quarter') do
+            display_details(article)
+          end
+      end
     end
   end
 
   def display_photo(article)
     if article.image_url
-      image_tag(article.image_url)
+      article.image_url
     else
-      image_tag("https://source.unsplash.com/1600x900/?{#{article.title}}")
+      "https://source.unsplash.com/1600x900/?{#{article.title}}"
     end
   end
 
@@ -55,10 +72,12 @@ module ApplicationHelper
         concat link_to(
           content_tag(:div, nil, class: 'hero-head ml-5 mt-4') do
             content_tag(:p, @categories.find(index + 1).name, class: "title has-text-white") + content_tag(:p, nil, class: "hero-body pt-6 has-text-white") + (content_tag(:p, articles.title, class: "hero-foot subtitle size-6 mb-2") if articles)
-          end + (display_photo(articles) if articles), '#', class: 'has-text-black column', style: "background: url('{display_photo(articles) if articles}')"
+          end + ".", '#', class: 'has-text-black column', style: "background: url('#{display_photo(articles) if articles}') center center; background-size: cover"
         )
       end
     end    
   end
+
+  
 end
 # (display_photo(articles) if articles)
