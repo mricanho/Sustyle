@@ -1,24 +1,26 @@
 module ApplicationHelper
-  def four_articles(art, ind)
-    if ind < 2
+  def four_articles(article, index)
+    if index < 2
       content_tag(:div, nil, class: 'photo') do
-        display_photo(art)
+        display_photo(article)
       end +
         content_tag(:div, nil, class: 'details') do
-          display_details(art)
+          display_details(article)
         end
     else
       content_tag(:div, nil, class: 'details') do
-        display_details(art)
+        display_details(article)
       end +
         content_tag(:div, nil, class: 'photo') do
-          display_photo(art)
+          display_photo(article)
         end
     end
   end
 
   def display_photo(article)
-    return 
+    if article.image_url
+      image_tag(article.image_url)
+    else
       image_tag("https://source.unsplash.com/1600x900/?{#{article.title}}")
     end
   end
@@ -52,10 +54,10 @@ module ApplicationHelper
       articles.each_with_index do |articles, index|
         concat link_to(
           content_tag(:div, nil, class: 'hero-head ml-5 mt-4') do
-            content_tag(:p, @categories.find(index + 1).name, class: "title has-text-white") + content_tag(:p, nil, class: "hero-body pt-6 has-text-white") + (content_tag(:p, articles.title, class: "hero-foot subtitle size-6 mb-2") if articles)
+            content_tag(:p, @find_cat, class: "title has-text-white") + content_tag(:p, nil, class: "hero-body pt-6 has-text-white") + (content_tag(:p, articles.title, class: "hero-foot subtitle size-6 mb-2") if articles)
           end + (display_photo(articles) if articles), '#', class: 'recent-article1 column'
         )
       end
-    
+    end    
   end
 end
