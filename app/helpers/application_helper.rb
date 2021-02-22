@@ -5,11 +5,11 @@ module ApplicationHelper
       content_tag(:div, nil, class: 'photo',
                              style: "background: url('#{display_photo(article)}') center center; background-size: cover") do
       end +
-        content_tag(:div, nil, class: 'details', style: 'background-color: white') do
+        content_tag(:div, nil, class: 'details pb-0 pt-0', style: 'background-color: white') do
           display_details(article)
         end
     else
-      content_tag(:div, nil, class: 'details', style: 'background-color: white') do
+      content_tag(:div, nil, class: 'details pb-0 pt-0', style: 'background-color: white') do
         display_details(article)
       end +
         content_tag(:div, nil, class: 'photo',
@@ -33,7 +33,7 @@ module ApplicationHelper
   def display_details(article)
     content_tag(:h1, @category.name,
                 class: 'orange hero-head title is-size-4') + content_tag(:h2, article.title, class: 'title is-size-4') +
-      content_tag(:p, simple_format(article.text.truncate(105), class: 'hero-body px-0')) +
+      content_tag(:p, simple_format(article.text.truncate(105), class: 'hero-body px-0 pb-0 pt-0')) +
       content_tag(:span, "#{article.votes_count} votes - If you like this article, show it:  ", class: 'pt-3') +
       content_tag(:span, nil, class: 'orange-links button is-small') do
         vote_button(article)
