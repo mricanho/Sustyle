@@ -10,7 +10,6 @@ RSpec.describe Article, type: :model do
 
     it 'validates' do
       should validate_presence_of(:title)
-      should validate_uniqueness_of(:title).case_insensitive
       should validate_presence_of(:text)
     end
   end
