@@ -23,7 +23,9 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Add general gems
+gem 'better_errors', '~> 2.9', '>= 2.9.1'
 gem 'bulma-rails', '~> 0.9.1'
+gem 'bundler', '~> 2.1', '>= 2.1.4'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'hirb', '~> 0.7.3'
@@ -32,8 +34,6 @@ gem 'shrine', '~> 3.3'
 gem 'shrine-cloudinary', '~> 1.1'
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
 gem 'unsplash', '~> 2.1'
-gem 'better_errors', '~> 2.9', '>= 2.9.1'
-gem 'bundler', '~> 2.1', '>= 2.1.4'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -57,7 +57,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   # Add guard and better errors
-  
+
   gem 'bullet', '~> 6.1', '>= 6.1.3'
 end
 
