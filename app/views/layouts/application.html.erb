@@ -55,7 +55,7 @@
             <div class="field is-grouped is-mobile">
               <% if user_signed_in? %>
                 <p class="control">
-                  <%= link_to 'New Article', new_article_path, class: "button new-a" %>
+                  <%= link_to 'Write an article', new_article_path, class: "button new-a" %>
                 </p>
                 <p class="control">
                   <%= link_to current_user.name, edit_user_registration_path, class: "button is-white" %>
@@ -79,7 +79,7 @@
     <main>
       <%= yield %>
     </main>
-    <footer class="footer pb-4 pt-4 is-justify-content-space-between">
+    <footer class="footer pb-5 pt-3 mt-5 is-justify-content-space-between">
       <div class="columns is-vcentered">
         <div class="column is-3 ">   
           <%= link_to root_path, class: "img" do %>

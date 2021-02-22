@@ -1,3 +1,43 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  h1 {
+    display: inline-block;
+    border-bottom: #ffa500 2px solid;
+  }
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.details {
+  padding-top: 0.3rem;
+  padding-left: 0.8rem;
+  padding-right: 1.6rem;
+  padding-bottom: 2rem;
+  background-image: linear-gradient(125deg, #fafafa 22.22%, #fff 22.22%, #fff 50%, #fafafa 50%, #fafafa 72.22%, #fff 72.22%, #fff 100%);
+  background-size: 10.99px 15.69px;
+}
+
+.cont {
+  min-height: calc(100vh - 12rem);
+
+  @media only screen and (max-width: 1270px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.photo {
+  background-color: orange;
+  height: calc(50vh - 6rem);
+}
+
+.orange {
+  color: #F99F0E;
+}
