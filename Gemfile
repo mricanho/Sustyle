@@ -32,6 +32,7 @@ gem 'shrine', '~> 3.3'
 gem 'shrine-cloudinary', '~> 1.1'
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
 gem 'unsplash', '~> 2.1'
+gem 'better_errors', '~> 2.9', '>= 2.9.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
@@ -55,10 +56,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   # Add guard and better errors
-  gem 'better_errors', '~> 2.9', '>= 2.9.1'
+  
   gem 'bullet', '~> 6.1', '>= 6.1.3'
-  gem 'guard', '~> 2.16', '>= 2.16.2'
-  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 end
 
 group :test do
