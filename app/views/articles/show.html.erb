@@ -1,7 +1,37 @@
-<p id="notice"><%= notice %></p>
+<section class="hero is-large is-info">
+  <p id="notice"><%= notice %></p>
+  <div class="container">
+    <div class="box hero-body">
+      <div class="card">
+        <div class="card-content">
+          <p class="title">
+            <%= @article.title %>
+          </p>
+          <p class="subtitle">
+            Jeff Atwood
+          </p>
+          <div class="content">
+            <%= @article.text %>
+          </div>
+        </div>
+        <footer class="card-footer">
+          <p class="card-footer-item">
+            <span>
+              View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+            </span>
+          </p>
+          <p class="card-footer-item">
+            <span>
+              Share on <a href="#">Facebook</a>
+            </span>
+          </p>
+        </footer>      
+    </div>
+    
 
-<p>
-  <strong>Article:</strong>
-  <%= @article.article %>
-</p>
+  </div>
+    
+  
+</section>
+
 
