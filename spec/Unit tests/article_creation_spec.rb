@@ -4,11 +4,11 @@ RSpec.feature 'Articles creation', type: :feature do
   describe 'sign in and enters article new page' do
     before :each do
       user = User.create!(name: 'Miguel', email: 'mricanho@gmail.com', password: 'password1234')
-      article = Article.create!(author: user, title: 'A title', text: 'Some text')
-      fashion = Category.create(name: 'Fashion', priority: 1)
-      technology = Category.create(name: 'Technology', priority: 2)
-      food = Category.create(name: 'Food', priority: 3)
-      energy = Category.create(name: 'Energy', priority: 4)
+      Article.create!(author: user, title: 'A title', text: 'Some text')
+      Category.create(name: 'Fashion', priority: 1)
+      Category.create(name: 'Technology', priority: 2)
+      Category.create(name: 'Food', priority: 3)
+      Category.create(name: 'Energy', priority: 4)
     end
 
     let :login do
