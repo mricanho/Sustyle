@@ -3,6 +3,7 @@ class Article < ApplicationRecord
   belongs_to :author, class_name: 'User'
   has_many :votes, dependent: :destroy
   has_and_belongs_to_many :categories
+  has_rich_text :body
 
   validates :title, presence: true
   validates :text, presence: true
