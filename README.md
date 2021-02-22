@@ -8,11 +8,11 @@ This site has been created mainly with Ruby on Rails as a framework and PostgreS
 ![screenshot](./code2.jpeg)
 ## Live Demo
 
-<a href="https://murmuring-wildwood-50583.herokuapp.com/">Visit Page</a>
+<a href="#">Visit Page</a>
 
 ## Video Presentation
 
-<a href="https://murmuring-wildwood-50583.herokuapp.com/">Video</a>
+<a href="https://www.loom.com/share/19db9ed1023545daa7868b08bbbc96d4">Video</a>
 
 ## Built With
 
