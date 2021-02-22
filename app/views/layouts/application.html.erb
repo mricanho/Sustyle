@@ -55,7 +55,7 @@
             <div class="field is-grouped is-mobile">
               <% if user_signed_in? %>
                 <p class="control">
-                  <%= link_to 'Write an article', new_article_path, class: "button new-a" %>
+                  <%= link_to 'Write an article', new_article_path, class: "button new-a is-rounded" %>
                 </p>
                 <p class="control">
                   <%= link_to current_user.name, edit_user_registration_path, class: "button is-white" %>

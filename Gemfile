@@ -22,18 +22,17 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-
 # Add general gems
 gem 'bulma-rails', '~> 0.9.1'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'hirb', '~> 0.7.3'
+gem 'image_processing', '~> 1.12', '>= 1.12.1'
 gem 'sentry-rails'
 gem 'sentry-ruby'
-gem 'simple_form', '~> 5.0', '>= 5.0.3'
 gem 'shrine', '~> 3.3'
-gem 'image_processing', '~> 1.12', '>= 1.12.1'
-gem "shrine-cloudinary", "~> 1.1"
+gem 'shrine-cloudinary', '~> 1.1'
+gem 'simple_form', '~> 5.0', '>= 5.0.3'
 gem 'unsplash', '~> 2.1'
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -43,9 +42,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'database_cleaner', '~> 2.0', '>= 2.0.1'
+  gem 'dotenv-rails'
   gem 'rspec-rails', '~> 4.0', '>= 4.0.2'
   gem 'sqlite3', '~> 1.4'
-  gem 'dotenv-rails'
 end
 
 group :development do
