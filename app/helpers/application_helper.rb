@@ -1,3 +1,4 @@
+# rubocop: disable Style/StringConcatenation, Lint/ShadowingOuterLocalVariable
 module ApplicationHelper
   def four_articles(article, index)
     if index < 2
@@ -66,3 +67,4 @@ module ApplicationHelper
     end
   end
 end
+# rubocop: enable Style/StringConcatenation, Lint/ShadowingOuterLocalVariable
