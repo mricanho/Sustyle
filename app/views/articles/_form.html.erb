@@ -4,8 +4,7 @@
   <div class="field">
     <div class="control">
       <%= f.input :title, label: "What's the title of your article?", input_html: { class: "textarea"}, wrapper: false, label_html: {class: "label"}, placeholder: "Incredible title here...", autofocus: true %><br />
-      <%= f.input :text, as: :rich_text_area, label: "Fill the content of your article:", wrapper: false, label_html: {class: "label"}, placeholder: "Awesome content article here..." %>
-      
+      <%= f.input :text, label: "Fill the content of your article:", input_html: { class: "textarea"}, wrapper: false, label_html: {class: "label"}, placeholder: "Awesome content article here..." %>
       <br>
       <%= f.input :image, label: "Select your image", input_html: { class: "file", value: @article.cached_image_data}, wrapper: false, label_html: {class: "label"} %>
       <br>
@@ -15,5 +14,5 @@
     <% end %>
     </div>
   </div>
-  <%= f.button :submit, class: "button is-dark is-centered" %>
+  <%= f.button :submit, class: "button is-dark" %>
 <% end %>
