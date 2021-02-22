@@ -62,9 +62,9 @@ module ApplicationHelper
             content_tag(:p, @categories.find(index + 1).name, class: 'title has-text-white') + content_tag(:p, nil, class: 'hero-body pt-6 has-text-white') + (if articles
                                                                                                                                                                  content_tag(:p, articles.title, class: 'hero-foot subtitle size-6 mb-2')
                                                                                                                                                                end)
-          end + '', '#', class: 'has-text-black column', style: "background: url('#{if articles
-                                                                                      display_photo(articles)
-                                                                                    end}') center center; background-size: cover"
+          end + '', '', class: 'has-text-black column', style: "background: url('#{if articles
+                                                                                     display_photo(articles)
+                                                                                   end}') center center; background-size: cover"
         )
       end
     end

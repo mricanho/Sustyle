@@ -18,14 +18,13 @@ RSpec.feature 'Articles creation', type: :feature do
       click_button 'commit'
     end
 
-
     context 'Write an article' do
       it 'Renders a template to write an article' do
         login
         visit root_path
-  
+
         first('a', text: 'Write an article').click
-  
+
         expect(page).to have_content(/Create a New Article/i)
       end
 
@@ -37,6 +36,5 @@ RSpec.feature 'Articles creation', type: :feature do
         expect(page).to have_content 'You need to sign in or sign up before continuing'
       end
     end
-
   end
 end
