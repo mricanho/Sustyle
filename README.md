@@ -35,7 +35,7 @@ The Entity Relationship Diagram used in the database:
 To run this project locally, please ensure you have Ruby and Ruby on Rails installed on your machine, then clone this repository by running.
 
 ```bash
-git clone https://github.com/mricanho/members-only
+git clone https://github.com/mricanho/Sustyle.git
 ```
 Open your terminal and CD to the directory where you create the clone repository.
 
