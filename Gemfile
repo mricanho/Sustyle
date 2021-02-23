@@ -35,7 +35,6 @@ gem 'shrine-cloudinary', '~> 1.1'
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
 gem 'unsplash', '~> 2.1'
 
-
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -69,4 +68,3 @@ group :test do
   gem 'shoulda-matchers', '~> 4.5', '>= 4.5.1'
   gem 'webdrivers'
 end
-
