@@ -3,12 +3,15 @@
 This is Sustyle, the website focused on the latest sustainability articles. Articles are separated into four main categories. This web page allows the registration of new users and authenticates them, users can create articles and assign them a category, they can also vote for the articles they like the most.
 
 This site has been created mainly with Ruby on Rails as a framework and PostgreSQL database.
-![screenshot](./code.jpeg)
+![screenshot](./app/assets/images/code.jpeg)
 
-![screenshot](./code2.jpeg)
+![screenshot](./app/assets/images/code2.jpeg)
+
+The Entity Relationship Diagram used in the database:
+![screenshot](./docs/ERD__articles.png)
 ## Live Demo
 
-<a href="https://vast-shore-82501.herokuapp.com/">Visit Page</a>
+<a href="https://murmuring-hamlet-96159.herokuapp.com/">Visit Page</a>
 
 ## Video Presentation
 
