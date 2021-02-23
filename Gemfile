@@ -26,6 +26,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'better_errors', '~> 2.9', '>= 2.9.1'
 gem 'bulma-rails', '~> 0.9.1'
 gem 'bundler', '~> 2.1', '>= 2.1.4'
+gem 'cloudinary', '~> 1.18', '>= 1.18.1'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'hirb', '~> 0.7.3'
@@ -34,7 +35,6 @@ gem 'shrine', '~> 3.3'
 gem 'shrine-cloudinary', '~> 1.1'
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
 gem 'unsplash', '~> 2.1'
-gem 'cloudinary', '~> 1.18', '>= 1.18.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
