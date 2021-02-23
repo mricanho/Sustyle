@@ -8,7 +8,7 @@ gem 'rails', '~> 6.1.1'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use postgresql as the database for Active Record
-
+gem 'pg', '~> 1.2', '>= 1.2.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
@@ -35,6 +35,7 @@ gem 'shrine-cloudinary', '~> 1.1'
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
 gem 'unsplash', '~> 2.1'
 
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
@@ -44,7 +45,6 @@ group :development, :test do
   gem 'database_cleaner', '~> 2.0', '>= 2.0.1'
   gem 'dotenv-rails'
   gem 'rspec-rails', '~> 4.0', '>= 4.0.2'
-  gem 'sqlite3', '~> 1.4'
 end
 
 group :development do
@@ -70,6 +70,3 @@ group :test do
   gem 'webdrivers'
 end
 
-group :production do
-  gem 'pg', '~> 1.2', '>= 1.2.3'
-end
