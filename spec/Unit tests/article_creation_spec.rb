@@ -5,10 +5,10 @@ RSpec.feature 'Articles creation', type: :feature do
     before :each do
       user = User.create!(name: 'Miguel', email: 'mricanho@gmail.com', password: 'password1234')
       Article.create!(author: user, title: 'A title', text: 'Some text')
-      Category.create(id:1, name: 'Fashion', priority: 1)
-      Category.create(id:2, name: 'Technology', priority: 2)
-      Category.create(id:3, name: 'Food', priority: 3)
-      Category.create(id:4, name: 'Energy', priority: 4)
+      Category.create(id: 1, name: 'Fashion', priority: 1)
+      Category.create(id: 2, name: 'Technology', priority: 2)
+      Category.create(id: 3, name: 'Food', priority: 3)
+      Category.create(id: 4, name: 'Energy', priority: 4)
     end
 
     let :login do
