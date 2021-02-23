@@ -1,0 +1,18 @@
+development:
+  cloud_name: mricanho
+  api_key: '751663857491855'
+  api_secret: pWduaw_ibf-MFcvR7_ARb6V7HNs
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: mricanho
+  api_key: '751663857491855'
+  api_secret: pWduaw_ibf-MFcvR7_ARb6V7HNs
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: mricanho
+  api_key: '751663857491855'
+  api_secret: pWduaw_ibf-MFcvR7_ARb6V7HNs
+  enhance_image_tag: true
+  static_file_support: false
