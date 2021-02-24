@@ -56,7 +56,7 @@ module ApplicationHelper
                                                                                                                                                                  content_tag(:p, articles.title, class: 'hero-foot subtitle size-6 mb-2')
                                                                                                                                                                end)
           end + '', article_path(articles), class: 'has-text-black column', style: "background: url('#{ display_photo(articles)
-                                                                                 }') center center; background-size: cover"
+                                                                                                     }') center center; background-size: cover"
         )
       end
     end
