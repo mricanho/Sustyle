@@ -56,6 +56,11 @@ Then you need to reinstall action text with:
 ```bash
 rails action_text:install 
 ```
+If the install asks you to overwrite something, just enter:
+
+```bash
+n
+```
 To setup the database run:
 
 ```bash
