@@ -1,6 +1,7 @@
+# rubocop: disable Metrics/BlockLength
 require 'rails_helper'
 
-RSpec.feature 'Articles creation', type: :feature do
+RSpec.feature 'Article-creation', type: :feature do
   describe 'sign in and enters article new page' do
     before :each do
       user = User.create!(name: 'Miguel', email: 'mricanho@gmail.com', password: 'password1234')
@@ -38,3 +39,4 @@ RSpec.feature 'Articles creation', type: :feature do
     end
   end
 end
+# rubocop: enable Metrics/BlockLength

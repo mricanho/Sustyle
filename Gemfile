@@ -21,7 +21,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'rubocop', require: false
 # Add general gems
 gem 'better_errors', '~> 2.9', '>= 2.9.1'
 gem 'bulma-rails', '~> 0.9.1'
