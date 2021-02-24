@@ -70,5 +70,9 @@ module ApplicationHelper
       end
     end
   end
+
+  def show_popular
+    return @most_popular.image_url if @most_popular.image
+  end
 end
 # rubocop: enable Lint/ShadowingOuterLocalVariable
