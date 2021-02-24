@@ -1,4 +1,4 @@
-# rubocop: disable Lint/ShadowingOuterLocalVariable, Layout/LineLength, Style/StringConcatenation
+# rubocop: disable Lint/ShadowingOuterLocalVariable, Layout/LineLength
 module ApplicationHelper
   def four_articles(article, index)
     if index < 2
@@ -19,15 +19,7 @@ module ApplicationHelper
   end
 
   def display_photo(article)
-    article.image_url || image_tag("https://source.unsplash.com/1600x900/?{#{article.title}}")
-  end
-
-  def display_photo1(article)
-    if article.image_url
-      image_tag(article.image_url)
-    else
-      image_tag("https://source.unsplash.com/1600x900/?{#{article.title}}")
-    end
+    article.image_url || image_url("https://source.unsplash.com/800x600/?{#{article.title}}")
   end
 
   def display_details(article)
@@ -63,9 +55,8 @@ module ApplicationHelper
             content_tag(:p, @categories.find(index + 1).name, class: 'title has-text-white') + content_tag(:p, nil, class: 'hero-body pt-6 has-text-white') + (if articles
                                                                                                                                                                  content_tag(:p, articles.title, class: 'hero-foot subtitle size-6 mb-2')
                                                                                                                                                                end)
-          end + '', '', class: 'has-text-black column', style: "background: url('#{if articles
-                                                                                     display_photo(articles)
-                                                                                   end}') center center; background-size: cover"
+          end + '', '', class: 'has-text-black column', style: "background: url('#{ display_photo(articles)
+                                                                                 }') center center; background-size: cover"
         )
       end
     end
@@ -75,4 +66,4 @@ module ApplicationHelper
     return @most_popular.image_url if @most_popular.image
   end
 end
-# rubocop: enable Lint/ShadowingOuterLocalVariable, Layout/LineLength, Style/StringConcatenation
+# rubocop: enable Lint/ShadowingOuterLocalVariable, Layout/LineLength
