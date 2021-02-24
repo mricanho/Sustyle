@@ -44,6 +44,18 @@ Now run:
 ```bash
 bundle install
 ```
+The next two steps are important to avoid an error of action text. 
+
+First run:
+
+```bash
+yarn install --check-files
+```
+Then you need to reinstall action text with:
+
+```bash
+rails action_text:install 
+```
 To setup the database run:
 
 ```bash
