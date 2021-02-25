@@ -1,4 +1,3 @@
-# rubocop: disable Lint/ShadowingOuterLocalVariable, Layout/LineLength, Style/StringConcatenation
 module ApplicationHelper
   def four_articles(article, index)
     if index < 2
@@ -66,4 +65,3 @@ module ApplicationHelper
     return @most_popular.image_url if @most_popular.image
   end
 end
-# rubocop: enable Lint/ShadowingOuterLocalVariable, Layout/LineLength, Style/StringConcatenation
