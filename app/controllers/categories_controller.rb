@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
     @most_popular = articles.most_popular
     @articles_by_category = []
     @categories.each do |category|
-      @articles_by_category << recent_article(category)
+      @articles_by_category << recent_article(category) unless recent_article(category).nil?
     end
   end
 
