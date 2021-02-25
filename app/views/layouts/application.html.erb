@@ -7,10 +7,109 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+     <nav class="navbar is-white">
+      <div class="navbar-brand">
+        <%= link_to root_path, class: "navbar-item" do %>
+        <%= image_tag("sustyle-black.png", alt: "sustyle logo", :size => "120x140") %>
+        <% end %>
+      </div>
+      <div id="navbarExample" class="navbar-menu is-justify-content-center">
+        <div class="navbar">
+          <div class="navbar-item button is-white is-align-self-center">
+            <%= link_to 'HOME', root_path, class: "button is-white" %>
+          </div>
+          <div class="navbar-item button is-white is-align-self-center">
+            <%= link_to 'FOOD', category_path(Category.find(3)), class: "button is-white" %>
+          </div>
+          <div class="navbar-item button is-white is-align-self-center">
+            <%= link_to 'ENERGY', category_path(Category.find(4)), class: "button is-white" %>
+          </div>
+          <div class="navbar-item button is-white is-align-self-center">
+            <%= link_to 'FASHION', category_path(Category.find(1)), class: "button is-white" %>
+          </div>
+          <div class="navbar-item button is-white is-align-self-center">
+            <%= link_to 'TECHNOLOGY', category_path(Category.find(2)), class: "button is-white" %>
+          </div>
+        </div>
+			  
+			</div>
+      <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped is-mobile">
+              <% if user_signed_in? %>
+                <p class="control">
+                  <%= link_to 'Write an article', new_article_path, class: "button new-a is-rounded" %>
+                </p>
+                <p class="control">
+                  <%= link_to current_user.name, edit_user_registration_path, class: "button is-white" %>
+                </p>
+                <p>
+                  <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"button is-white" %>
+                </p>
+              <% else %>
+              <p class="control">
+                <%= link_to 'LOG IN', new_user_session_path, class: "button is-white" %>
+              </p>
+              <p class="is-align-self-center">|</p>
+              <p class="control">
+                <%= link_to 'REGISTER', new_user_registration_path, class: "button is-white" %>
+              </p>
+              <% end %>
+              </div>
+            </div>
+				</div>
+    </nav>
+    <main>
+      <%= yield %>
+    </main>
+    <footer class="footer pb-5 pt-3 mt-5 is-justify-content-space-between">
+      <div class="columns is-vcentered">
+        <div class="column is-3 ">   
+          <%= link_to root_path, class: "img" do %>
+            <%= image_tag("sustyle-white.png", alt: "sustyle logo", :size => "110x120") %>
+          <% end %>
+        </div>
+        <div class="column is-6 is-size-7 has-text-centered">
+          <p>
+            <a href="#">Privacy</a>
+            <a href="#">Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <span class="has-text-white"> Copyright 2021. All rights reserved.</span>
+          </p>
+        </div>
+        <div class="column is-3 is-size-7 has-text-right is-flex-direction-row-reverse">
+          <li class="is-flex pl-6 is-align-items-center is-align-self-flex-end ml-6">
+            <span class="has-text-white">Connect with us:</span>
+            <div class="social-icons">
+              <a href="#" class="icon">
+                  <%= image_tag("twitter.png", class: "ml-5", alt: "twitter logo", :size => "32x32") %>      
+              </a>
+              <a href="#" class="icon">
+                  <%= image_tag("instagram.png", class: "ml-5", alt: "instagram-logo", :size => "32x32") %>      
+              </a>
+              <a href="#" class="icon">
+                  <%= image_tag("facebook.png", class: "ml-5", alt: "twitter logo", :size => "32x32") %>      
+              </a>
+            </div>
+          </li>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', () => {
+        (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+          const $notification = $delete.parentNode;
+
+          $delete.addEventListener('click', () => {
+            $notification.parentNode.removeChild($notification);
+          });
+        });
+      });
+    </script>
   </body>
 </html>

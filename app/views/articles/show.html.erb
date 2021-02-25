@@ -1,0 +1,26 @@
+<section class="hero is-large is-info">
+  <div class="columns">
+    <div class="column container">
+      <div class="hero-body p-6 mx-6">
+        <div class="card mx-6">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src='<%= display_photo(@article) %>' alt=".">
+            </figure>
+          </div>
+          <div class="card-content">
+            <p class="title">
+              <%= @article.title %>
+            </p>
+            <div class="content">
+              <%= @article.text %>
+            </div>
+          </div>  
+      </div>
+    </div>
+    
+
+  </div>  
+</section>
+
+

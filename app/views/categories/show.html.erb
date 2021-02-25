@@ -1,0 +1,8 @@
+<div class="cont grid">
+  <% @recent_related_articles.each_with_index do |art, ind| %>
+    <div class="grid">
+      <%= four_articles(art, ind)%>
+    </div>
+  <% end %>
+</div>
+
