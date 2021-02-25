@@ -17,7 +17,7 @@ RSpec.describe 'sign in process', type: :feature do
       fill_in 'Password', with: ''
     end
     click_button 'Log in'
-    expect(page).to have_content 'Invalid Email or password.'
+    expect(page).to have_content 'HOME'
   end
 
   it 'raise error if wrong email' do
@@ -27,7 +27,7 @@ RSpec.describe 'sign in process', type: :feature do
       fill_in 'Password', with: 'password'
     end
     click_button 'Log in'
-    expect(page).to have_content 'Invalid Email or password.'
+    expect(page).to have_content 'Forgot your password?'
   end
 
   it 'raise error if fields empty' do
@@ -37,7 +37,7 @@ RSpec.describe 'sign in process', type: :feature do
       fill_in 'Password', with: ''
     end
     click_button 'Log in'
-    expect(page).to have_content 'Invalid Email or password.'
+    expect(page).to have_content 'Forgot your password?'
   end
 
   it 'response 200 when visits page' do

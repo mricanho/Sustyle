@@ -1,3 +1,4 @@
+
 AllCops:
   Exclude:
     - "db/**/*"
@@ -36,6 +37,8 @@ Style/EachForSimpleLoop:
 Style/AndOr:
   Enabled: false
 Style/DefWithParentheses:
+  Enabled: false
+Style/StringConcatenation:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
