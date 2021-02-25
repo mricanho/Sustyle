@@ -1,3 +1,4 @@
+# rubocop: disable Lint/ShadowingOuterLocalVariable, Layout/LineLength
 module ApplicationHelper
   def four_articles(article, index)
     if index < 2
@@ -44,19 +45,25 @@ module ApplicationHelper
     end
   end
 
+  def link(articles, index)
+    link_to(
+      content_tag(:div, nil, class: 'hero-head ml-5 mt-4') do
+        content_tag(:p, @categories.find(index + 1).name,
+                    class: 'title has-text-white') +
+          content_tag(:p, nil, class: 'hero-body pt-6 has-text-white') +
+          (content_tag(:p, articles.title, class: 'hero-foot subtitle size-6 mb-2') if articles)
+      end,
+      article_path(articles), class: 'has-text-black column',
+                              style: "background: url('#{display_photo(articles)}') center center; background-size: cover"
+    )
+  end
+
   def show_articles_by_categories(articles)
     return if articles.nil?
 
     content_tag(:div, nil, class: 'columns is-gapless') do
       articles.each_with_index do |articles, index|
-        concat link_to(
-          content_tag(:div, nil, class: 'hero-head ml-5 mt-4') do
-            content_tag(:p, @categories.find(index + 1).name, class: 'title has-text-white') + content_tag(:p, nil, class: 'hero-body pt-6 has-text-white') + (if articles
-                                                                                                                                                                 content_tag(:p, articles.title, class: 'hero-foot subtitle size-6 mb-2')
-                                                                                                                                                               end)
-          end + '', article_path(articles), class: 'has-text-black column', style: "background: url('#{ display_photo(articles)
-                                                                                                     }') center center; background-size: cover"
-        )
+        concat(link(articles, index))
       end
     end
   end
@@ -65,3 +72,4 @@ module ApplicationHelper
     return @most_popular.image_url if @most_popular.image
   end
 end
+# rubocop: enable Lint/ShadowingOuterLocalVariable, Layout/LineLength
