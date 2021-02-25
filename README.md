@@ -11,7 +11,7 @@ The Entity Relationship Diagram used in the database:
 ![screenshot](./docs/ERD__articles.png)
 ## Live Demo
 
-<a href="https://murmuring-hamlet-96159.herokuapp.com/">Visit Page</a>
+<a href="https://sustyle.herokuapp.com/">Visit Page</a>
 
 ## Video Presentation
 
