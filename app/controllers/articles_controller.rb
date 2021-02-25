@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       if @article.save
         @article.categories << Category.find(category_ids)
-        format.html { redirect_to article_path(@article), notice: 'Article was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Article was successfully created.' }
         format.json { render :show, status: :created, location: @article }
       else
         format.html { render :new, status: :unprocessable_entity }

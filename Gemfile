@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'rubocop', require: false
 # Add general gems
-gem 'better_errors', '~> 2.9', '>= 2.9.1'
+
 gem 'bulma-rails', '~> 0.9.1'
 gem 'bundler', '~> 2.1', '>= 2.1.4'
 gem 'cloudinary', '~> 1.18', '>= 1.18.1'
@@ -57,7 +57,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   # Add guard and better errors
-
+  gem 'better_errors', '~> 2.9', '>= 2.9.1'
   gem 'bullet', '~> 6.1', '>= 6.1.3'
 end
 
@@ -66,6 +66,7 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
+  gem 'rspec'
   gem 'shoulda-matchers', '~> 4.5', '>= 4.5.1'
   gem 'webdrivers'
 end
