@@ -1,4 +1,4 @@
-# Private Events
+# Sustyle
 
 This is Sustyle, the website focused on the latest sustainability articles. Articles are separated into four main categories. This web page allows the registration of new users and authenticates them, users can create articles and assign them a category, they can also vote for the articles they like the most.
 
