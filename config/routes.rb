@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :categories, only: %i[show new create index]
-  devise_for :users, :controllers => { registrations: 'registrations'. sessions: 'users/sessions'}
+  devise_for :users, :controllers => { registrations: 'registrations', sessions: 'users/sessions'}
   # Two factor add
   devise_scope :user do
     scope :users, as: :users do
