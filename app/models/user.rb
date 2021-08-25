@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  devise :two_factor_authenticatable, :two_factor_backupable, :otp_secret_encryption_key => ENV['OTP_KEY']
+  devise :two_factor_authenticatable, :two_factor_backupable, otp_secret_encryption_key: ENV['OTP_KEY']
 
   has_many :articles, foreign_key: :author_id, dependent: :destroy
   has_many :votes, dependent: :destroy
