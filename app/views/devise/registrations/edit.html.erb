@@ -45,7 +45,10 @@
    
         <%= f.button :submit, "Update", class:"button is-dark" %>
 
-        <h2>Two Factor Authentication</h2>
+        <hr>
+
+        <h2 class="has-text-weight-bold is-size-4">Two Factor Authentication</h2>
+        <br>
 
         <div id="two_factor">
           <%= render partial: "devise/registrations/two_factor" %>
