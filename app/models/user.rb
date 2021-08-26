@@ -9,4 +9,11 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :registerable,
          :recoverable, :rememberable, :validatable
+
+  def otp_qr_code
+    issuer = 'Lisa'
+    label = "#{issuer}:#{email}"
+    qrcode = RQRCode::QRCode.new(otp_provisioning_uri(label, issuer: issuer))
+    qrcode.as_svg(module_size: 4)
+  end
 end
